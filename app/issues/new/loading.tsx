@@ -5,7 +5,6 @@ import "react-loading-skeleton/dist/skeleton.css";
 const LoadingNewIssuePage = () => {
   return (
     <Box className="max-w-xl">
-      Loading...
       <Skeleton />
       <Skeleton height="20rem" />
     </Box>
