@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
+import Skeleton from "@/app/components/Skeleton";
 import { AiFillBug } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
@@ -61,7 +62,7 @@ const NavLinks = () => {
 const AuthStatus = () => {
   const { status, data: session } = useSession();
 
-  if (status === "loading") return null;
+  if (status === "loading") return <Skeleton width="3rem" />;
 
   if (status === "unauthenticated")
     return (
